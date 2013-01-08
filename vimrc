@@ -5,17 +5,19 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'mayansmoke'
 Bundle 'delimitMate.vim'
+Bundle 'DeleteTrailingWhitespace'
 Bundle 'scratch.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-cucumber'
 Bundle 'vim-scripts/octave.vim--'
 
 " Enable syntax highlighting and indentation
 syntax on
 filetype plugin indent on
-augroup filetypedetect 
-    au! BufRead,BufNewFile *.m,*.oct set filetype=octave 
+augroup filetypedetect
+    au! BufRead,BufNewFile *.m,*.oct set filetype=octave
 augroup END
 
 " Indentation settings
@@ -46,10 +48,12 @@ set linebreak
 set visualbell
 set autoread
 set hidden
+let g:DeleteTrailingWhitespace = 1
+let g:DeleteTrailingWhitespace_Action = 'delete'
 
 " GUI settings
 if has('gui_running')
-    set guifont=Source\ Code\ Pro:h14
+    set guifont=Source\ Code\ Pro:h12
     set guioptions-=T
     colorscheme mayansmoke
     :au BufAdd,BufNewFile * nested tab sball
