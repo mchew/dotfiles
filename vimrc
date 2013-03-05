@@ -7,9 +7,11 @@ Bundle 'mayansmoke'
 Bundle 'delimitMate.vim'
 Bundle 'DeleteTrailingWhitespace'
 Bundle 'scratch.vim'
+Bundle 'JavaScript-Indent'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
+Bundle 'othree/html5.vim'
 Bundle 'tpope/vim-cucumber'
 Bundle 'vim-scripts/octave.vim--'
 
@@ -25,6 +27,10 @@ set tabstop=8
 set expandtab
 set softtabstop=4
 set shiftwidth=4
+
+" Trim trailing whitespace
+let g:DeleteTrailingWhitespace = 1
+let g:DeleteTrailingWhitespace_Action = 'delete'
 
 " Case-sensitive searches only if capital letter in search expression
 set ignorecase
@@ -48,8 +54,6 @@ set linebreak
 set visualbell
 set autoread
 set hidden
-let g:DeleteTrailingWhitespace = 1
-let g:DeleteTrailingWhitespace_Action = 'delete'
 
 " GUI settings
 if has('gui_running')
