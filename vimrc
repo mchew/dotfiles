@@ -8,6 +8,7 @@ Bundle 'delimitMate.vim'
 Bundle 'DeleteTrailingWhitespace'
 Bundle 'scratch.vim'
 Bundle 'JavaScript-Indent'
+Bundle 'pig.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
@@ -20,6 +21,7 @@ syntax on
 filetype plugin indent on
 augroup filetypedetect
     au! BufRead,BufNewFile *.m,*.oct set filetype=octave
+    au! BufRead,BufNewFile *.pig set filetype=pig
 augroup END
 
 " Indentation settings
