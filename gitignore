@@ -1,0 +1,21 @@
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# JetBrains
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Eclipse
+.project
+.metadata
+.classpath
+.settings/
+*.pydevproject
