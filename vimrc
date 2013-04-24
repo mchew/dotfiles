@@ -22,6 +22,7 @@ filetype plugin indent on
 augroup filetypedetect
     au! BufRead,BufNewFile *.m,*.oct set filetype=octave
     au! BufRead,BufNewFile *.pig set filetype=pig
+    au! BufRead,BufNewFile Vagrantfile set filetype=ruby
 augroup END
 
 " Indentation settings
