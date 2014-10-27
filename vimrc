@@ -9,10 +9,11 @@ Bundle 'DeleteTrailingWhitespace'
 Bundle 'scratch.vim'
 Bundle 'JavaScript-Indent'
 Bundle 'pig.vim'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
 Bundle 'othree/html5.vim'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-cucumber'
 Bundle 'vim-scripts/octave.vim--'
 
@@ -58,10 +59,19 @@ set visualbell
 set autoread
 set hidden
 
+" Status line
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_symbols.branch = '⎇'
+
 " GUI settings
 if has('gui_running')
     set guifont=Source\ Code\ Pro:h12
     set guioptions-=T
     colorscheme mayansmoke
+    let g:airline_theme = 'light'
     :au BufAdd,BufNewFile * nested tab sball
 endif
