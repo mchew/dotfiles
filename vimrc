@@ -5,12 +5,12 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'mayansmoke'
 Plugin 'delimitMate.vim'
 Plugin 'DeleteTrailingWhitespace'
 Plugin 'scratch.vim'
 Plugin 'JavaScript-Indent'
 Plugin 'pig.vim'
+Plugin 'chriskempson/base16-vim'
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
@@ -74,7 +74,6 @@ let g:airline_symbols.branch = '⎇'
 if has('gui_running')
     set guifont=Source\ Code\ Pro:h12
     set guioptions-=T
-    colorscheme mayansmoke
-    let g:airline_theme = 'light'
+    colorscheme base16-default
     :au BufAdd,BufNewFile * nested tab sball
 endif
