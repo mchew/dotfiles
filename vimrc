@@ -1,21 +1,24 @@
-" Use Vundle to manage plugins (https://github.com/gmarik/vundle)
+set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'mayansmoke'
-Bundle 'delimitMate.vim'
-Bundle 'DeleteTrailingWhitespace'
-Bundle 'scratch.vim'
-Bundle 'JavaScript-Indent'
-Bundle 'pig.vim'
-Bundle 'bling/vim-airline'
-Bundle 'ervandew/supertab'
-Bundle 'scrooloose/syntastic'
-Bundle 'othree/html5.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-cucumber'
-Bundle 'vim-scripts/octave.vim--'
+
+" Use Vundle to manage plugins (https://github.com/gmarik/Vundle.vim)
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'mayansmoke'
+Plugin 'delimitMate.vim'
+Plugin 'DeleteTrailingWhitespace'
+Plugin 'scratch.vim'
+Plugin 'JavaScript-Indent'
+Plugin 'pig.vim'
+Plugin 'bling/vim-airline'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/syntastic'
+Plugin 'othree/html5.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-cucumber'
+Plugin 'vim-scripts/octave.vim--'
+call vundle#end()
 
 " Enable syntax highlighting and indentation
 syntax on
