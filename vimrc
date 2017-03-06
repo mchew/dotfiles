@@ -4,14 +4,15 @@ filetype off
 " Use Vundle to manage plugins (https://github.com/gmarik/Vundle.vim)
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'delimitMate.vim'
 Plugin 'DeleteTrailingWhitespace'
 Plugin 'scratch.vim'
 Plugin 'JavaScript-Indent'
 Plugin 'pig.vim'
 Plugin 'chriskempson/base16-vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
 Plugin 'othree/html5.vim'
@@ -27,6 +28,7 @@ augroup filetypedetect
     au! BufRead,BufNewFile *.m,*.oct set filetype=octave
     au! BufRead,BufNewFile *.pig set filetype=pig
     au! BufRead,BufNewFile Vagrantfile set filetype=ruby
+    au! BufRead,BufNewFile *.gradle set filetype=groovy
 augroup END
 
 " Indentation settings
@@ -74,6 +76,7 @@ let g:airline_symbols.branch = '⎇'
 if has('gui_running')
     set guifont=Source\ Code\ Pro:h12
     set guioptions-=T
-    colorscheme base16-default
+    colorscheme base16-tomorrow
+    let g:airline_theme = 'base16'
     :au BufAdd,BufNewFile * nested tab sball
 endif
